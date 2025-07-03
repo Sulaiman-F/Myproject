@@ -261,6 +261,28 @@
             Visit Site
           </a>
         </div>
+        <div
+          class="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center transform hover:-translate-y-2 transition"
+        >
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            My Portfolio
+          </h2>
+          <a href="#" onclick="window.location.reload()">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=$https://sulaiman-f.github.io/Myproject/"
+              alt="Portfolio QR Code"
+              class="w-44 h-44 mb-4"
+              id="portfolioQR"
+            />
+          </a>
+          <button
+            onclick="navigator.share ? navigator.share({title: 'Sulaiman Alfawzan Portfolio', url: window.location.href}) : navigator.clipboard.writeText(window.location.href).then(() => alert('URL copied to clipboard!'))"
+            class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-900 inline-flex items-center"
+          >
+            <i class="fas fa-share-alt mr-2"></i>
+            Share Portfolio
+          </button>
+        </div>
       </div>
     </main>
 
